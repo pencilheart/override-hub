@@ -26,5 +26,5 @@ jobs:
       - name: Merge Upstream/main into Your main
         run: |
           git checkout main
-          git merge upstream/main --no-edit || echo "No merge needed"
+          git merge upstream/main --allow-unrelated-histories --no-edit || echo "No merge needed"
           git push origin main
